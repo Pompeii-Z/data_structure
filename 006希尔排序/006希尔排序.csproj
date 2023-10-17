@@ -7,7 +7,7 @@
     <ProjectGuid>{C06E14AA-5C33-41D0-AC0C-E654E8B6D3A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>_006希尔排序</RootNamespace>
-    <AssemblyName>_006希尔排序</AssemblyName>
+    <AssemblyName>006希尔排序</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
