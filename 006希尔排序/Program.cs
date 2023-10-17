@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace 希尔排序
+namespace _006希尔排序
 {
     internal class Program
     {
@@ -30,6 +30,5 @@ namespace 希尔排序
                 }
             }
         }
-
     }
 }

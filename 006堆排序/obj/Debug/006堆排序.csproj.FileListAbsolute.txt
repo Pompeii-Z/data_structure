@@ -1,8 +1,0 @@
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\bin\Debug\006堆排序.exe.config
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\bin\Debug\006堆排序.exe
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\bin\Debug\006堆排序.pdb
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\obj\Debug\006堆排序.csproj.AssemblyReference.cache
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\obj\Debug\006堆排序.csproj.SuggestedBindingRedirects.cache
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\obj\Debug\006堆排序.csproj.CoreCompileInputs.cache
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\obj\Debug\006堆排序.exe
-D:\Users\Documents\Projects\source\repos\Pratice\006堆排序\obj\Debug\006堆排序.pdb

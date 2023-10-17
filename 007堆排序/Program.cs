@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _006堆排序
+namespace _007堆排序
 {
     internal class Program
     {
@@ -56,6 +56,5 @@ namespace _006堆排序
                 Heapify(array, n, largest);
             }
         }
-
     }
 }

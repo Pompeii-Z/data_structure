@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("006堆排序")]
+[assembly: AssemblyTitle("006希尔排序")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("006堆排序")]
+[assembly: AssemblyProduct("006希尔排序")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("2ea7a7b5-5e2a-4196-890d-b38eac17769c")]
+[assembly: Guid("c06e14aa-5c33-41d0-ac0c-e654e8b6d3a2")]
 
 // 程序集的版本信息由下列四个值组成: 
 //

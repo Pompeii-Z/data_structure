@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{17713AB9-7FCD-48F4-A753-04440ACD5712}</ProjectGuid>
+    <ProjectGuid>{67ECD375-6D51-4C42-A0DA-5C2C14B9E0D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>希尔排序</RootNamespace>
-    <AssemblyName>希尔排序</AssemblyName>
+    <RootNamespace>_007堆排序</RootNamespace>
+    <AssemblyName>_007堆排序</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
