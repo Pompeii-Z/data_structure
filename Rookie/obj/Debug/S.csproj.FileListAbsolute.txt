@@ -1,0 +1,8 @@
+D:\Users\Documents\Projects\source\repos\Pratice\S\bin\Debug\S.exe.config
+D:\Users\Documents\Projects\source\repos\Pratice\S\bin\Debug\S.exe
+D:\Users\Documents\Projects\source\repos\Pratice\S\bin\Debug\S.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\S\obj\Debug\S.csproj.AssemblyReference.cache
+D:\Users\Documents\Projects\source\repos\Pratice\S\obj\Debug\S.csproj.SuggestedBindingRedirects.cache
+D:\Users\Documents\Projects\source\repos\Pratice\S\obj\Debug\S.csproj.CoreCompileInputs.cache
+D:\Users\Documents\Projects\source\repos\Pratice\S\obj\Debug\S.exe
+D:\Users\Documents\Projects\source\repos\Pratice\S\obj\Debug\S.pdb

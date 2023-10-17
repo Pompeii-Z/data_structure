@@ -1,0 +1,8 @@
+D:\Users\Documents\Projects\source\repos\Pratice\Up\bin\Debug\Up.exe.config
+D:\Users\Documents\Projects\source\repos\Pratice\Up\bin\Debug\Up.exe
+D:\Users\Documents\Projects\source\repos\Pratice\Up\bin\Debug\Up.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\Up\obj\Debug\Up.csproj.AssemblyReference.cache
+D:\Users\Documents\Projects\source\repos\Pratice\Up\obj\Debug\Up.csproj.SuggestedBindingRedirects.cache
+D:\Users\Documents\Projects\source\repos\Pratice\Up\obj\Debug\Up.csproj.CoreCompileInputs.cache
+D:\Users\Documents\Projects\source\repos\Pratice\Up\obj\Debug\Up.exe
+D:\Users\Documents\Projects\source\repos\Pratice\Up\obj\Debug\Up.pdb

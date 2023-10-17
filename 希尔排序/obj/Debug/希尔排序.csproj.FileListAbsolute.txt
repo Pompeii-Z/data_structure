@@ -1,0 +1,8 @@
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\bin\Debug\希尔排序.exe.config
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\bin\Debug\希尔排序.exe
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\bin\Debug\希尔排序.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\obj\Debug\希尔排序.csproj.AssemblyReference.cache
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\obj\Debug\希尔排序.csproj.SuggestedBindingRedirects.cache
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\obj\Debug\希尔排序.csproj.CoreCompileInputs.cache
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\obj\Debug\希尔排序.exe
+D:\Users\Documents\Projects\source\repos\Pratice\希尔排序\obj\Debug\希尔排序.pdb
