@@ -3,7 +3,7 @@
     /// <summary>
     /// 二叉链表
     /// </summary>
-    internal class TreeNode
+    public class TreeNode
     {
         public int val;
         public TreeNode left;

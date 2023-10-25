@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Up;
 
 namespace S
 {
@@ -36,8 +37,12 @@ namespace S
             //PassThePillow(4, 5);
             int[] nums = { 0, 3, 2, 1 };
             string s = "RLL";
-            SumDistance(nums, s, 3);
-            ValidMountainArray(nums);
+            //SumDistance(nums, s, 3);
+            //ValidMountainArray(nums);
+
+            int[] ints = { -1, -100, 3, 99 };
+            Rotate(ints, 2);
+
             #endregion
 
         }
@@ -167,7 +172,6 @@ namespace S
         /// <returns></returns>
         public static bool CanConstruct(string ransomNote, string magazine)
         {
-
             char[] aRand = ransomNote.ToCharArray();
             char[] bRand = magazine.ToCharArray();
             Dictionary<char, int> map = new Dictionary<char, int>();
@@ -214,9 +218,7 @@ namespace S
         public static int PassThePillow(int n, int time)
         {
             if (time < n)
-            {
                 return time + 1;
-            }
             else
             {
                 int r = n - 1;
@@ -249,6 +251,7 @@ namespace S
                 this.next = next;
             }
         }
+
         /// <summary>
         /// 876.链表的中间结点  快慢指针
         /// </summary>
@@ -310,10 +313,7 @@ namespace S
                     result = Math.Max(result, prices[i] - min);
                 }
             }
-
             return result;
-
-
         }
 
         /// <summary>
@@ -610,7 +610,6 @@ namespace S
                 res.Add(nums[i]);
 
             }
-
             for (int i = 1; i <= nums.Length; i++)
             {
                 if (!res.Contains(i))
@@ -618,11 +617,7 @@ namespace S
                     ans.Add(i);
                 }
             }
-
             return ans;
-
-
-
         }
 
         /// <summary>
@@ -710,7 +705,7 @@ namespace S
         }
 
         /// <summary>
-        /// 70.爬楼梯 DP 
+        /// 70.爬楼梯 TODO：DP 
         /// </summary>
         /// <param name="n"></param>
         /// <returns></returns>
@@ -719,5 +714,476 @@ namespace S
             return 0;
         }
 
+        /// <summary>
+        /// 2.两数相加
+        /// </summary>
+        /// <param name="l1"></param>
+        /// <param name="l2"></param>
+        /// <returns></returns>
+        public static ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+        {
+            ListNode dummyHead = new ListNode(0);
+            ListNode current = dummyHead;
+            int carry = 0;
+            //在新链表上操作
+            while (l1 != null || l2 != null)
+            {
+                int x = (l1 != null) ? l1.val : 0;
+                int y = (l2 != null) ? l2.val : 0;
+                int sum = x + y + carry;
+
+                carry = sum / 10;
+                current.next = new ListNode(sum % 10);
+                current = current.next;
+
+                if (l1 != null) l1 = l1.next;
+                if (l2 != null) l2 = l2.next;
+            }
+            //最后一次，处理最后的商
+            if (carry > 0)
+            {
+                current.next = new ListNode(carry);
+            }
+
+            return dummyHead.next;
+
+        }
+
+        /// <summary>
+        /// 215.数组中的第K个最大元素 TODO：堆排序
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        //public int FindKthLargest(int[] nums, int k)
+        //{
+
+        //}
+
+        /// <summary>
+        /// 374.猜数字的大小 二分法
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public int GuessNumber(int n)
+        {
+            int left = 1; int right = n;
+            while (left <= right)
+            {
+                int mid = left + (right - left + 1) / 2;
+                int temp = guess(mid);
+                if (temp == 0)
+                {
+                    return mid;
+                }
+                else if (temp == 1)
+                {
+                    left = mid + 1;
+                }
+                else if (temp == -1)
+                {
+                    right = mid - 1;
+                }
+            }
+            return right;
+
+        }
+        //上题模拟接口 返回1（大了） 0（正确） -1（小了）
+        int guess(int num)
+        {
+            return -1;
+        }
+
+        /// <summary>
+        /// 278.第一个错误的版本 二分法
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public int FirstBadVersion(int n)
+        {
+            int left = 1;
+            int right = n;
+            while (left < right)
+            {
+                int mid = left + (right - left) / 2;
+                if (IsBadVersion(mid))
+                {
+                    right = mid;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
+            return left;
+        }
+        //模拟是否为错误版本
+        bool IsBadVersion(int num)
+        {
+            return false;
+        }
+
+        /// <summary>
+        /// 103.二叉树的锯齿形层序遍历
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public IList<IList<int>> ZigzagLevelOrder(TreeNode root)
+        {
+            IList<IList<int>> resultList = new List<IList<int>>();
+            if (root == null) return resultList;
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+
+            bool isVerse = false; //是否逆序
+
+            while (queue.Count > 0)
+            {
+                int count = queue.Count;
+                List<int> tempList = new List<int>();
+                while (count > 0)
+                {
+                    TreeNode node = queue.Dequeue();
+                    //不用tempList.Reverse();，可以逆序时使用Insert插入到前面。
+                    tempList.Add(node.val);
+                    count--;
+                    if (node.left != null) queue.Enqueue(node.left);
+                    if (node.right != null) queue.Enqueue(node.right);
+                }
+                isVerse = !isVerse;
+                if (!isVerse)
+                    tempList.Reverse();
+
+                resultList.Add(tempList);
+            }
+            return resultList;
+        }
+
+        /// <summary>
+        /// 125.验证回文串
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public bool IsPalindrome(string s)
+        {
+            int left = 0;
+            int right = s.Length - 1;
+            while (left < right)
+            {
+                //过滤非字母和数字的元素
+                while (left < right && !char.IsLetterOrDigit(s[left]))
+                    left++;
+                while (left < right && !char.IsLetterOrDigit(s[right]))
+                    right--;
+                if (char.ToLower(s[left]) != char.ToLower(s[right]))
+                    return false;
+                left++;
+                right--;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 2525.根据规则将箱子分类
+        /// </summary>
+        /// <param name="length"></param>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        /// <param name="mass"></param>
+        /// <returns></returns>
+        public string CategorizeBox(int length, int width, int height, int mass)
+        {
+            int d = 10000;
+            int v = 1000000000;
+            long curV = (long)length * width * height;
+            if ((length >= d || width >= d || height >= d || curV >= v) && mass >= 100)
+            {
+                return "Both";
+            }
+            else if (mass >= 100)
+            {
+                return "Heavy";
+            }
+            else if (length >= d || width >= d || height >= d || curV >= v)
+            {
+                return "Bulky";
+            }
+            return "Neither";
+        }
+
+        /// <summary>
+        /// 58.最后一个单词的长度
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public int LengthOfLastWord(string s)
+        {
+            if (string.IsNullOrWhiteSpace(s)) // 检查字符串是否为空或仅包含空格
+            {
+                return 0; // 字符串为空或仅包含空格，最后一个单词长度为0
+            }
+
+            char[] cS = s.TrimEnd().ToCharArray(); // 去除字符串末尾空格并转换为字符数组
+            int slow = 0;
+
+            for (int i = 0; i < cS.Length; i++)
+            {
+                if (cS[i] != ' ')
+                {
+                    if (slow != 0)
+                    {
+                        cS[slow++] = ' ';
+                    }
+                    while (i < cS.Length && cS[i] != ' ')
+                    {
+                        cS[slow++] = cS[i++];
+                    }
+                }
+            }
+            Array.Resize(ref cS, slow);
+
+            int l = cS.Length - 1;
+            int count = 0;
+            while (l >= 0 && cS[l] != ' ')
+            {
+                count++;
+                l--;
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// 2678.老人的数目
+        /// </summary>
+        /// <param name="details"></param>
+        /// <returns></returns>
+        public static int CountSeniors(string[] details)
+        {
+            int count = 0;
+            for (int i = 0; i < details.Length; i++)
+            {
+                if (int.Parse(details[i].Substring(11, 2)) > 60)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// 461.汉明距离
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public int HammingDistance(int x, int y)
+        {
+            int z = x ^ y;//异或  1 0 为1，否则为0。
+            int count = 0;
+            while (z != 0)
+            {
+                //统计1的个数
+                if ((z & 1) == 1)//按位与操作 都为1为1 否则为0
+                {
+                    count++;
+                }
+                z >>= 1;
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// LCR 133.位1的个数
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        public int HammingWeight(uint n)
+        {
+            int count = 0;
+            while (n != 0)
+            {
+                if ((n & 1) == 1)
+                {
+                    count++;
+                }
+                n >>= 1;
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// 75.颜色分类
+        /// </summary>
+        /// <param name="nums"></param>
+        public void SortColors(int[] nums)
+        {
+            int left = 0;
+            int right = nums.Length - 1;
+            int cur = 0;
+            while (cur <= right)
+            {
+                if (nums[cur] == 0)
+                {
+                    int temp = nums[cur];
+                    nums[cur] = nums[left];
+                    nums[left] = temp;
+                    cur++;
+                    left++;
+                }
+                else if (nums[cur] == 2)
+                {
+                    int temp = nums[cur];
+                    nums[cur] = nums[right];
+                    nums[right] = temp;
+                    right--;
+                }
+                else
+                    cur++;
+            }
+        }
+
+        /// <summary>
+        /// 9.回文数
+        /// </summary>
+        /// <param name="x"></param>
+        /// <returns></returns>
+        public bool IsPalindrome(int x)
+        {
+            char[] charArray = x.ToString().ToCharArray();
+            return IsPalindromeT(charArray);
+        }
+
+        /// <summary>
+        /// 判断数组是否为回文数组
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
+        /// <returns></returns>
+        private static bool IsPalindromeT<T>(T[] array)
+        {
+            int left = 0;
+            int right = array.Length - 1;
+            while (left < right)
+            {
+                if (EqualityComparer<T>.Default.Equals(array[left], array[right]))//比较泛型对象是否相等
+                {
+                    left++;
+                    right--;
+                }
+                else
+                    return false;
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// 234.回文链表
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
+        public bool IsPalindromeList(ListNode head)
+        {
+            List<int> array = new List<int>();
+            while (head != null)
+            {
+                array.Add(head.val);
+                head = head.next;
+            }
+            int[] arr = array.ToArray();
+            return IsPalindromeT(arr);
+        }
+
+        /// <summary>
+        /// 56.合并区间
+        /// </summary>
+        /// <param name="intervals"></param>
+        /// <returns></returns>
+        //public int[][] Merge(int[][] intervals)
+        //{
+
+        //}
+        /// <summary>
+        /// 189.轮转数组 -->思路：剑指Offer58-II.左旋转字符串
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="k"></param>
+        public static void Rotate(int[] nums, int k)
+        {
+            if (nums.Length == 1)
+                return;
+            k %= nums.Length;//k大于数组长度的情况
+            Reverse(nums, 0, nums.Length - 1);//翻转整个
+            Reverse(nums, 0, k - 1);//翻转前k个
+            Reverse(nums, k, nums.Length - 1);//剩余
+        }
+        //该题思路来源：左旋转字符串
+        private static void Reverse(int[] nums, int start, int end)
+        {
+            int left = start;
+            int right = end;
+            while (left < right)
+            {
+                int temp = nums[left];
+                nums[left] = nums[right];
+                nums[right] = temp;
+                left++;
+                right--;
+            }
+        }
+
+        /// <summary>
+        /// 114.二叉树展开为链表
+        /// </summary>
+        /// <param name="root"></param>
+        public void Flatten(TreeNode root)
+        {
+            if (root == null)
+                return;
+            List<TreeNode> list = new List<TreeNode>();
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.Push(root);
+
+            while (stack.Count > 0)
+            {
+                TreeNode node = stack.Pop();
+                list.Add(node);
+
+                if (node.right != null) stack.Push(node.right);
+                if (node.left != null) stack.Push(node.left);
+            }
+
+            for (int i = 1; i < list.Count; i++)
+            {
+                root.left = null;
+                root.right = list[i];
+                root = root.right;
+            }
+        }
+
+        /// <summary>
+        /// 148.排序链表
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
+        public ListNode SortList(ListNode head)
+        {
+            ListNode dummyNode = new ListNode();
+            ListNode cur = dummyNode;
+            List<int> r = new List<int>();
+            while (head != null)
+            {
+                r.Add(head.val);
+                head = head.next;
+            }
+
+            r.Sort();
+
+            for (int i = 0; i < r.Count; i++)
+            {
+                cur.next = new ListNode(r[i]);
+                cur = cur.next;
+            }
+            return dummyNode.next;
+        }
     }
 }

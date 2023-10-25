@@ -1,0 +1,8 @@
+D:\Users\Documents\Projects\source\repos\Pratice\递归\bin\Debug\递归.exe.config
+D:\Users\Documents\Projects\source\repos\Pratice\递归\bin\Debug\递归.exe
+D:\Users\Documents\Projects\source\repos\Pratice\递归\bin\Debug\递归.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\递归\obj\Debug\递归.csproj.AssemblyReference.cache
+D:\Users\Documents\Projects\source\repos\Pratice\递归\obj\Debug\递归.csproj.SuggestedBindingRedirects.cache
+D:\Users\Documents\Projects\source\repos\Pratice\递归\obj\Debug\递归.csproj.CoreCompileInputs.cache
+D:\Users\Documents\Projects\source\repos\Pratice\递归\obj\Debug\递归.exe
+D:\Users\Documents\Projects\source\repos\Pratice\递归\obj\Debug\递归.pdb

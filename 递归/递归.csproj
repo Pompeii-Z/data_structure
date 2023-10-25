@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C020BBA0-8E8D-4AB7-9B78-52A41AD67CC4}</ProjectGuid>
+    <ProjectGuid>{25373035-69AC-47F1-B628-285C2164FB85}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>S</RootNamespace>
-    <AssemblyName>S</AssemblyName>
+    <RootNamespace>递归</RootNamespace>
+    <AssemblyName>递归</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MinStack.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\随想录\随想录.csproj">
-      <Project>{c1ae8b24-5cd3-4baa-a028-70087fc14e07}</Project>
-      <Name>随想录</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

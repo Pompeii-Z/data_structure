@@ -6,3 +6,7 @@ D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\Rookie.csproj.
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\Rookie.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\S.exe
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\S.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.exe
+D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.pdb
+D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.exe.config
+D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\Rookie.csproj.CopyComplete
