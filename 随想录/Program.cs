@@ -125,10 +125,10 @@ namespace Up
         {
             int left = 0;
             int right = nums.Length - 1;
-            int mid = (left + right) / 2;
+            int mid = (right - left) / 2 + left;
             while (left <= right)
             {
-                mid = (left + right) / 2;
+                mid = (right - left) / 2 + left;
                 if (nums[mid] == target)
                 {
                     return mid;
@@ -1227,7 +1227,6 @@ namespace Up
             string p = new string(chars);
             Console.WriteLine(p);
             return p;
-
             #endregion
         }
 
@@ -1275,6 +1274,7 @@ namespace Up
             Console.WriteLine(ss);
             return ss;
         }
+
         /// <summary>
         /// LCR 182. 动态口令 原题：剑指Offer58-II.左旋转字符串
         /// </summary>
@@ -1306,7 +1306,7 @@ namespace Up
         /// <returns></returns>
         public static int StrStr(string haystack, string needle)
         {
-            //BF
+            //BF 暴力
             int left = 0;
             int right = needle.Length;
             while (left <= haystack.Length - needle.Length)
@@ -1396,9 +1396,10 @@ namespace Up
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
+        //暴力：
         public static bool RepeatedSubstringPattern(string s)
         {
-            //不建议使用！
+
             for (int i = 1; i <= s.Length / 2; i++)
             {
                 if (s.Length % i == 0)//切割出字符串的倍数不等于原字符串长度，跳过该子串。
@@ -1417,6 +1418,7 @@ namespace Up
             }
             return false;
         }
+        //kmp
         public static bool RepeatedSubstringPattern1(string s)
         {
             int n = s.Length;
@@ -2786,9 +2788,6 @@ namespace Up
 
 
         #endregion
-
-
-
 
     }
 }

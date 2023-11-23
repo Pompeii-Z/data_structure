@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using Up;
 
 namespace S
@@ -41,10 +43,24 @@ namespace S
             //ValidMountainArray(nums);
 
             int[] ints = { -1, -100, 3, 99 };
-            Rotate(ints, 2);
+            // Rotate(ints, 2);
 
+            int[][] values = new int[3][] {
+                new int[]{ 1,3,5,7 },
+                new int[]{ 10,11,16,20 },
+                new int[]{ 23,30,34,60 },
+            };
+            int[][] values1 = new int[2][] {
+                new int[]{ 1 },
+                new int[]{ 3},
+            };
+            //SearchMatrix(values1, 0);
+
+            MergeAlternately("abc", "bnvmm");
             #endregion
 
+            string s1 = EntityParser("&amp; is an HTML entity but &ambassador; is not.");
+            Console.WriteLine(s1);
         }
 
         /// <summary>
@@ -1185,5 +1201,413 @@ namespace S
             }
             return dummyNode.next;
         }
+
+        /// <summary>
+        /// 2520.统计能整除数字的位数
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public int CountDigits(int num)
+        {
+            int count = 0;
+            string s = num.ToString();
+            int len = s.Length;
+            for (int i = 0; i < len; i++)
+            {
+                if (num % int.Parse(s[i].ToString()) == 0)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        /// <summary>
+        /// 35.搜索插入位置
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public int SearchInsert(int[] nums, int target)
+        {
+            int left = 0;
+            int right = nums.Length - 1;
+            int mid = (right - left) / 2 + left;
+            while (left <= right)
+            {
+                mid = (right - left) / 2 + left;
+                if (nums[mid] == target)
+                {
+                    return mid;
+                }
+                if (nums[mid] > target)
+                {
+                    right = mid - 1;
+                }
+                else
+                {
+                    left = mid + 1;
+                }
+            }
+            return left;
+        }
+
+        /// <summary>
+        /// 74.搜索二维矩阵
+        /// </summary>
+        /// <param name="matrix"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
+        public static bool SearchMatrix(int[][] matrix, int target)
+        {
+            if (matrix == null || matrix.Length == 0 || matrix[0].Length == 0)
+                return false;
+
+            int m = matrix.Length;
+            int n = matrix[0].Length;
+
+            int left = 0;
+            int right = m * n - 1;
+
+            while (left <= right)
+            {
+                int mid = left + (right - left) / 2;
+                int midValue = matrix[mid / n][mid % n];//第几组第几个
+
+                if (midValue == target)
+                {
+                    return true;
+                }
+                else if (midValue < target)
+                {
+                    left = mid + 1;
+                }
+                else
+                {
+                    right = mid - 1;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// 2558.从数量最多的堆取走礼物
+        /// </summary>
+        /// <param name="gifts"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        public long PickGifts(int[] gifts, int k)
+        {
+            //使用库函数
+            //找到前k个最大的数，并改变礼物数量
+            long res = 0;
+            for (int i = 0; i < k; i++)
+            {
+                int index = Array.IndexOf(gifts, gifts.Max());
+                gifts[index] = (int)Math.Sqrt(gifts[index]);
+            }
+            for (int i = 0; i < gifts.Length; i++)
+            {
+                res += gifts[i];
+            }
+            return res;
+        }
+
+        /// <summary>
+        /// 49.字母异位词分组
+        /// </summary>
+        /// <param name="strs"></param>
+        /// <returns></returns>
+        public IList<IList<string>> GroupAnagrams(string[] strs)
+        {
+            IList<IList<string>> resList = new List<IList<string>>();
+            Dictionary<string, List<string>> dic = new Dictionary<string, List<string>>();
+            //将字符串排序后，把顺序相同的单词加入同一个List。
+            for (int i = 0; i < strs.Length; i++)
+            {
+                char[] c = strs[i].ToCharArray();
+                Array.Sort(c);
+                string str = new string(c);
+                if (!dic.ContainsKey(str))
+                {
+                    dic[str] = new List<string>();
+                }
+                //将字母相同的异位词加入
+                dic[str].Add(strs[i]);
+            }
+            foreach (var item in dic)
+            {
+                resList.Add(item.Value);
+            }
+            return resList;
+        }
+
+        /// <summary>
+        /// 128.最长连续序列
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        public int LongestConsecutive(int[] nums)
+        {
+            if (nums.Length == 1)
+                return 1;
+            if (nums.Length == 0)
+                return 0;
+            //nlogn 
+            //排序后，模拟
+            Array.Sort(nums);
+            int max = int.MinValue;
+            int count = 1;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                //前一个比当前小1
+                if (nums[i - 1] + 1 == nums[i]) count++;
+                else if (nums[i - 1] == nums[i]) continue;//相等继续遍历
+                else count = 1; //重置
+
+                //记录最长的连续序列长度
+                if (count > max) max = count;
+            }
+            if (count > max) max = count;
+            return max;
+        }
+
+        /// <summary>
+        /// 274.H指数
+        /// 275.H指数Ⅱ
+        /// </summary>
+        /// <param name="citations"></param>
+        /// <returns></returns>
+        public int HIndex(int[] citations)
+        {
+            /*
+             将科学家某个时段（也可是全部）的论文，按被引次数从高往低排，然后每篇论文得到一个序号，将每篇论文的序号和被引次数进行比较，找到序号h，使得这一篇论文的序号h小于或等于它的被引次数，而下一篇论文（序号为h＋1）的序号大于它的被引次数。
+             */
+            Array.Sort(citations);
+            Array.Reverse(citations);
+            int h;
+            int n = citations.Length;
+            for (h = 0; h < n; h++)
+            {
+                if (citations[h] <= h)
+                    return h;
+            }
+            if (citations[n - 1] >= n)
+                return n;
+            return 0;
+        }
+
+        //二叉搜索树（Binary Search Tree，BST）是一种特殊类型的二叉树，其中每个节点的左子树中的节点值都比该节点小，右子树中的节点值都比该节点大。
+        /// <summary>
+        /// 230. 二叉搜索树中第K小的元素
+        /// </summary>
+        /// <param name="root"></param>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        public int KthSmallest(TreeNode root, int k)
+        {
+            //因为这是一个二叉搜索树，所以采用中序遍历（升序），返回第k-1个元素。
+            List<int> result = new List<int>();
+            dfs(root, result);
+            return result[k - 1];
+        }
+        void dfs(TreeNode treeNode, List<int> res)
+        {
+            if (treeNode == null)
+                return;
+            dfs(treeNode.left, res);
+            res.Add(treeNode.val);
+            dfs(treeNode.right, res);
+        }
+
+        /// <summary>
+        /// 1768. 交替合并字符串
+        /// </summary>
+        /// <param name="word1"></param>
+        /// <param name="word2"></param>
+        /// <returns></returns>
+        public static string MergeAlternately(string word1, string word2)
+        {
+            if (word1.Length <= 0)
+                return word2;
+            else if (word2.Length <= 0)
+                return word1;
+
+            char[] w1 = word1.ToCharArray();
+            char[] w2 = word2.ToCharArray();
+            int w1Length = w1.Length;
+            int w2Length = w2.Length;
+            string res = "";
+
+            int c = w1Length - w2Length;
+            if (c == 0)
+            {
+                for (int i = 0; i < w1Length; i++)
+                {
+                    res += w1[i].ToString() + w2[i].ToString();
+                }
+            }
+            else if (c > 0)
+            {
+                for (int i = 0; i < w2Length; i++)
+                {
+                    res += w1[i].ToString() + w2[i].ToString();
+                }
+                res += word1.Substring(w2Length, c);
+            }
+            else
+            {
+                for (int i = 0; i < w1Length; i++)
+                {
+                    res += w1[i].ToString() + w2[i].ToString();
+                }
+                res += word2.Substring(w1Length, Math.Abs(c));
+            }
+            return res;
+        }
+        //优化版本
+        public static string MergeAlternately1(string word1, string word2)
+        {
+            if (string.IsNullOrEmpty(word1))
+                return word2;
+            else if (string.IsNullOrEmpty(word2))
+                return word1;
+
+            int minLength = Math.Min(word1.Length, word2.Length);
+            var result = new StringBuilder(minLength * 2); // 优化预分配空间
+
+            for (int i = 0; i < minLength; i++)
+            {
+                result.Append(word1[i]);
+                result.Append(word2[i]);
+            }
+
+            if (word1.Length > minLength)
+                result.Append(word1, minLength, word1.Length - minLength);
+            else if (word2.Length > minLength)
+                result.Append(word2, minLength, word2.Length - minLength);
+
+            return result.ToString();
+        }
+
+        /// <summary>
+        /// 1071.字符串的最大公因子
+        /// </summary>
+        /// <param name="str1"></param>
+        /// <param name="str2"></param>
+        /// <returns></returns>
+        public string GcdOfStrings(string str1, string str2)
+        {
+            if (str1 + str2 != str2 + str1)//判断是否有公共前缀
+            {
+                return "";
+            }
+            return str1.Substring(0, gcd(str1.Length, str2.Length));
+        }
+        //辗转相除法：计算a,b的最大公约数，也就是计算两个字符串的长度的最大公约数
+        private int gcd(int a, int b)
+        {
+            return b == 0 ? a : gcd(b, a % b);
+        }
+
+        /// <summary>
+        /// 1431. 拥有最多糖果的孩子
+        /// </summary>
+        /// <param name="candies"></param>
+        /// <param name="extraCandies"></param>
+        /// <returns></returns>
+        public IList<bool> KidsWithCandies(int[] candies, int extraCandies)
+        {
+            int max = int.MinValue;//最大糖果数
+            for (int i = 0; i < candies.Length; i++)
+            {
+                if (candies[i] > max)
+                {
+                    max = candies[i];
+                }
+            }
+            List<bool> result = new List<bool>();
+            for (int i = 0; i < candies.Length; i++)
+            {
+                if (candies[i] + extraCandies >= max)
+                    result.Add(true);
+                else
+                    result.Add(false);
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// 2095. 删除链表的中间节点
+        /// </summary>
+        /// <param name="head"></param>
+        /// <returns></returns>
+        public ListNode DeleteMiddle(ListNode head)
+        {
+            if (head.next == null)
+                return null;
+            ListNode slow = head;
+            ListNode fast = head.next.next;
+
+            while (fast != null && fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            //slow.next为应该删除的中间节点
+            slow.next = slow.next.next;
+            return head;
+        }
+
+        /// <summary>
+        /// 1410. HTML 实体解析器
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
+        public static string EntityParser(string text)
+        {
+            Dictionary<string, string> dic = new Dictionary<string, string>() {
+                {"&quot;", "\""},
+                {"&apos;", "'"},
+                {"&amp;", "&"},
+                {"&gt;", ">"},
+                {"&lt;", "<"},
+                {"&frasl;", "/"} };
+            StringBuilder sb = new StringBuilder();
+            char[] cText = text.ToCharArray();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                if (cText[i] == '&')//处理特殊符号
+                {
+                    StringBuilder temp = new StringBuilder();
+                    int right = i;
+                    while (right < text.Length && cText[right] != ';')
+                    {
+                        temp.Append(cText[right]);
+                        right++;
+                    }
+                    temp.Append(';');
+                    if (dic.ContainsKey(temp.ToString()))
+                    {
+                        sb.Append(dic[temp.ToString()]);
+                        i = right;
+                    }
+                    else//不在字典中 照常处理
+                    {
+                        sb.Append(cText[i]);
+                    }
+                }
+                else
+                {
+                    sb.Append(cText[i]);
+                }
+            }
+            return sb.ToString();
+        }
+
+
     }
 }
