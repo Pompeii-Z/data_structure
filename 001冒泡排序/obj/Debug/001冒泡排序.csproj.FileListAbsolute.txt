@@ -6,3 +6,11 @@ D:\Users\Documents\Projects\source\repos\Pratice\001冒泡排序\obj\Debug\001�
 D:\Users\Documents\Projects\source\repos\Pratice\001冒泡排序\obj\Debug\001冒泡排序.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Projects\source\repos\Pratice\001冒泡排序\obj\Debug\001冒泡排序.exe
 D:\Users\Documents\Projects\source\repos\Pratice\001冒泡排序\obj\Debug\001冒泡排序.pdb
+D:\Data\Code\CSharp\Pratice\001冒泡排序\bin\Debug\001冒泡排序.exe.config
+D:\Data\Code\CSharp\Pratice\001冒泡排序\bin\Debug\001冒泡排序.exe
+D:\Data\Code\CSharp\Pratice\001冒泡排序\bin\Debug\001冒泡排序.pdb
+D:\Data\Code\CSharp\Pratice\001冒泡排序\obj\Debug\001冒泡排序.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\001冒泡排序\obj\Debug\001冒泡排序.csproj.SuggestedBindingRedirects.cache
+D:\Data\Code\CSharp\Pratice\001冒泡排序\obj\Debug\001冒泡排序.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\001冒泡排序\obj\Debug\001冒泡排序.exe
+D:\Data\Code\CSharp\Pratice\001冒泡排序\obj\Debug\001冒泡排序.pdb

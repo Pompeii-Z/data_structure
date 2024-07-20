@@ -1,0 +1,7 @@
+D:\Data\Code\CSharp\Pratice\006希尔排序\bin\Debug\006希尔排序.exe.config
+D:\Data\Code\CSharp\Pratice\006希尔排序\bin\Debug\006希尔排序.exe
+D:\Data\Code\CSharp\Pratice\006希尔排序\bin\Debug\006希尔排序.pdb
+D:\Data\Code\CSharp\Pratice\006希尔排序\obj\Debug\006希尔排序.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\006希尔排序\obj\Debug\006希尔排序.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\006希尔排序\obj\Debug\006希尔排序.exe
+D:\Data\Code\CSharp\Pratice\006希尔排序\obj\Debug\006希尔排序.pdb

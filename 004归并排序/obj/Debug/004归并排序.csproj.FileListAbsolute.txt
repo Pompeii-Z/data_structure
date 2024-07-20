@@ -6,3 +6,10 @@ D:\Users\Documents\Projects\source\repos\Pratice\004归并排序\obj\Debug\004�
 D:\Users\Documents\Projects\source\repos\Pratice\004归并排序\obj\Debug\004归并排序.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Projects\source\repos\Pratice\004归并排序\obj\Debug\004归并排序.exe
 D:\Users\Documents\Projects\source\repos\Pratice\004归并排序\obj\Debug\004归并排序.pdb
+D:\Data\Code\CSharp\Pratice\004归并排序\bin\Debug\004归并排序.exe.config
+D:\Data\Code\CSharp\Pratice\004归并排序\bin\Debug\004归并排序.exe
+D:\Data\Code\CSharp\Pratice\004归并排序\bin\Debug\004归并排序.pdb
+D:\Data\Code\CSharp\Pratice\004归并排序\obj\Debug\004归并排序.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\004归并排序\obj\Debug\004归并排序.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\004归并排序\obj\Debug\004归并排序.exe
+D:\Data\Code\CSharp\Pratice\004归并排序\obj\Debug\004归并排序.pdb

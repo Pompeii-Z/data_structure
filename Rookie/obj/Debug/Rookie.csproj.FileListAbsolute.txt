@@ -10,3 +10,15 @@ D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.exe
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.pdb
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\bin\Debug\Up.exe.config
 D:\Users\Documents\Projects\source\repos\Pratice\Rookie\obj\Debug\Rookie.csproj.CopyComplete
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\S.exe.config
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\S.exe
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\S.pdb
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\Up.exe
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\Up.pdb
+D:\Data\Code\CSharp\Pratice\Rookie\bin\Debug\Up.exe.config
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\Rookie.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\Rookie.csproj.SuggestedBindingRedirects.cache
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\Rookie.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\Rookie.csproj.CopyComplete
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\S.exe
+D:\Data\Code\CSharp\Pratice\Rookie\obj\Debug\S.pdb

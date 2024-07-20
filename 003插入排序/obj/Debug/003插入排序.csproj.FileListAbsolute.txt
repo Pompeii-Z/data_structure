@@ -6,3 +6,10 @@ D:\Users\Documents\Projects\source\repos\Pratice\003插入排序\obj\Debug\003�
 D:\Users\Documents\Projects\source\repos\Pratice\003插入排序\obj\Debug\003插入排序.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Projects\source\repos\Pratice\003插入排序\obj\Debug\003插入排序.exe
 D:\Users\Documents\Projects\source\repos\Pratice\003插入排序\obj\Debug\003插入排序.pdb
+D:\Data\Code\CSharp\Pratice\003插入排序\bin\Debug\003插入排序.exe.config
+D:\Data\Code\CSharp\Pratice\003插入排序\bin\Debug\003插入排序.exe
+D:\Data\Code\CSharp\Pratice\003插入排序\bin\Debug\003插入排序.pdb
+D:\Data\Code\CSharp\Pratice\003插入排序\obj\Debug\003插入排序.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\003插入排序\obj\Debug\003插入排序.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\003插入排序\obj\Debug\003插入排序.exe
+D:\Data\Code\CSharp\Pratice\003插入排序\obj\Debug\003插入排序.pdb

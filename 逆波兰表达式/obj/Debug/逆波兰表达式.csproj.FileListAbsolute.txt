@@ -1,0 +1,8 @@
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\bin\Debug\逆波兰表达式.exe.config
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\bin\Debug\逆波兰表达式.exe
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\bin\Debug\逆波兰表达式.pdb
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\obj\Debug\逆波兰表达式.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\obj\Debug\逆波兰表达式.csproj.SuggestedBindingRedirects.cache
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\obj\Debug\逆波兰表达式.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\obj\Debug\逆波兰表达式.exe
+D:\Data\Code\CSharp\Pratice\逆波兰表达式\obj\Debug\逆波兰表达式.pdb

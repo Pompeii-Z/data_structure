@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
+using System.Text.RegularExpressions;
 using Up;
 
 namespace S
@@ -60,7 +62,12 @@ namespace S
             #endregion
 
             string s1 = EntityParser("&amp; is an HTML entity but &ambassador; is not.");
-            Console.WriteLine(s1);
+            //Console.WriteLine(s1);
+
+            Console.WriteLine(CountLetters("X2Y3XZ"));    // 输出：X3Y3Z1
+            Console.WriteLine(CountLetters("Z3X(XY)2"));  // 输出：X3Y2Z3
+            Console.WriteLine(CountLetters("Z4(Y2(XZ2)3)2X2"));  // 输出：X8Y4Z16
+
         }
 
         /// <summary>
@@ -1608,6 +1615,118 @@ namespace S
             return sb.ToString();
         }
 
+        /// <summary>
+        /// 11.盛最多水的容器
+        /// </summary>
+        /// <param name="height"></param>
+        /// <returns></returns>
+        public int MaxArea(int[] height)
+        {
+            int left = 0;
+            int right = height.Length - 1;
+            int area = int.MinValue;
+            while (left != right)
+            {
+                //int height = left > right ? left : right;
 
+                left++;
+            }
+            return area;
+        }
+
+        /// <summary>
+        /// 2369. 检查数组是否存在有效划分
+        /// </summary>
+        /// <param name="nums"></param>
+        /// <returns></returns>
+        //public bool ValidPartition(int[] nums)
+        //{
+
+        //}
+
+        ///<summary>
+        ///3.无重复字符的最长字串
+        ///</summary>
+        public int LengthOfLongestSubstring(string s)
+        {
+
+            return 0;
+        }
+
+        /// <summary>
+        /// 写一个函数用来统计字符串中各字母出现的次数。（编程语言不限）
+        /// </summary>
+        /// <returns></returns>
+        static string CountLetters(string s)
+        {
+            if (string.IsNullOrEmpty(s))
+            {
+                return "";
+            }
+
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            Stack<int> stack = new Stack<int>();
+            int num = 1;
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+
+                if (char.IsDigit(c))
+                {
+                    num = c - '0';
+
+                    while (i + 1 < s.Length && char.IsDigit(s[i + 1]))
+                    {
+                        num = num * 10 + (s[++i] - '0');
+                    }
+
+                    stack.Push(num);
+                }
+                else if (c == ')')
+                {
+                    int multiply = stack.Pop();
+                    num *= multiply;
+                    char prevChar = s[i - 1];
+                    if (!map.ContainsKey(prevChar))
+                    {
+                        map[prevChar] = num;
+                    }
+                    else
+                    {
+                        map[prevChar] += num;
+                    }
+                    num = 1;
+                }
+                else
+                {
+                    if (stack.Count > 0)
+                    {
+                        num *= stack.Peek();
+                    }
+
+                    if (!map.ContainsKey(c))
+                    {
+                        map[c] = num;
+                    }
+                    else
+                    {
+                        map[c] += num;
+                    }
+                    num = 1;
+                }
+            }
+
+            StringBuilder sb = new StringBuilder();
+
+            foreach (KeyValuePair<char, int> kvp in map)
+            {
+                sb.Append(kvp.Key).Append(kvp.Value);
+            }
+
+            return sb.ToString();
+        }
+
+       
     }
 }

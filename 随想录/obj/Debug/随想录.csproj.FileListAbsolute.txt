@@ -6,3 +6,11 @@ D:\Users\Documents\Projects\source\repos\Pratice\随想录\obj\Debug\随想录.c
 D:\Users\Documents\Projects\source\repos\Pratice\随想录\obj\Debug\随想录.csproj.CoreCompileInputs.cache
 D:\Users\Documents\Projects\source\repos\Pratice\随想录\obj\Debug\Up.exe
 D:\Users\Documents\Projects\source\repos\Pratice\随想录\obj\Debug\Up.pdb
+D:\Data\Code\CSharp\Pratice\随想录\bin\Debug\Up.exe.config
+D:\Data\Code\CSharp\Pratice\随想录\bin\Debug\Up.exe
+D:\Data\Code\CSharp\Pratice\随想录\bin\Debug\Up.pdb
+D:\Data\Code\CSharp\Pratice\随想录\obj\Debug\随想录.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\随想录\obj\Debug\随想录.csproj.SuggestedBindingRedirects.cache
+D:\Data\Code\CSharp\Pratice\随想录\obj\Debug\随想录.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\随想录\obj\Debug\Up.exe
+D:\Data\Code\CSharp\Pratice\随想录\obj\Debug\Up.pdb

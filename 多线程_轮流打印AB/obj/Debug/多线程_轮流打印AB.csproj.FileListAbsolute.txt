@@ -1,0 +1,8 @@
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\obj\Debug\多线程_轮流打印AB.csproj.AssemblyReference.cache
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\obj\Debug\多线程_轮流打印AB.csproj.SuggestedBindingRedirects.cache
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\obj\Debug\多线程_轮流打印AB.csproj.CoreCompileInputs.cache
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\bin\Debug\多线程_轮流打印AB.exe.config
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\bin\Debug\多线程_轮流打印AB.exe
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\bin\Debug\多线程_轮流打印AB.pdb
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\obj\Debug\多线程_轮流打印AB.exe
+D:\Data\Code\CSharp\Pratice\多线程_轮流打印AB\obj\Debug\多线程_轮流打印AB.pdb
